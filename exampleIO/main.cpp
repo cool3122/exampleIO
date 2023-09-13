@@ -6,18 +6,16 @@ using namespace std;
 int main() {
 	double aDouble = 0.0;
 
-	cout << "Enter in a number to multiply by 5: ";
+	cout << "Enter in a number: ";
 
 	cin >> aDouble;
 
-	aDouble = aDouble * 5.0;
+	aDouble = aDouble / 3.14159;
 
 	ios::fmtflags oldSettings = cout.flags();
 	int oldPrecision = cout.precision();
 
-	cout << "Your number multiplied by 5 is \n" << setw(10) << aDouble <<  endl;
-	cout << setprecision(4) << aDouble << endl;			 // Use this for total sig figs
-	cout << fixed << setprecision(4) << aDouble << endl; // use fixed for decimals
+	cout << "Your number multiplied by 5 is \n" << setw(10) << fixed << setprecision(5) << aDouble << endl; 
 
 	cout.flags(oldSettings);
 	cout.precision(oldPrecision);
